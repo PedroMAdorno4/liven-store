@@ -1,11 +1,8 @@
-export const login = () => {
-    return {
-        type: 'LOGIN'
-    }
-}
-
-export const logout = () => {
-    return {
-        type: 'LOGOUT'
+export const actions = {
+    cart: {
+        addProduct: 'ADD_PRODUCT',
+        removeProduct: 'REMOVE_PRODUCT',
+        incrementQuantity: 'INCREMENT_QUANTITY',
+        decrementQuantity: 'DECREMENT_QUANTITY',
     }
 }
