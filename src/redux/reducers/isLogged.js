@@ -1,8 +1,10 @@
+import { actions } from "../actions";
+
 const loggedReducer = (state = false, action) => {
     switch (action.type) {
-        case 'LOGIN':
+        case actions.isLogged.login:
             return true;
-        case 'LOGOUT':
+        case actions.isLogged.logout:
             return false;
         default:
             return state;

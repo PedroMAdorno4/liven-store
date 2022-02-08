@@ -36,7 +36,7 @@ function ChoosePayment() {
                 <Form>
                     <p>Escolha um metodo de pagamento:</p>
                     <div className='flex flex-col space-y-4 mt-4'>
-                        {Constants.paymentMethods.map(method => <PaymentMethod data={method} />)}
+                        {Constants.paymentMethods.map(method => <PaymentMethod data={method} key={method.name} />)}
                     </div>
                     <button type='submit' className='button-primary mt-8 w-full'>Finalizar compra</button>
                 </Form>

@@ -1,27 +1,29 @@
+import { actions } from "."
+
 export const addProduct = (product) => {
     return {
-        type: 'ADD_PRODUCT',
+        type: actions.cart.addProduct,
         payload: product
     }
 }
 
 export const incrementQuantity = (id) => {
     return {
-        type: 'INCREMENT_QUANTITY',
+        type: actions.cart.incrementQuantity,
         payload: id
     }
 }
 
 export const removeProduct = (id) => {
     return {
-        type: 'REMOVE_PRODUCT',
+        type: actions.cart.removeProduct,
         payload: id
     }
 }
 
 export const decrementQuantity = (id) => {
     return {
-        type: 'DECREMENT_QUANTITY',
+        type: actions.cart.decrementQuantity,
         payload: id
     }
 }

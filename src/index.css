@@ -61,4 +61,8 @@
 	.price {
 		@apply font-bold text-indigo-700;
 	}
+
+	.monospace {
+		font-family: 'Roboto Mono', monospace;
+	}
 }

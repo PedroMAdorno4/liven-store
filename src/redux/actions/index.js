@@ -4,5 +4,9 @@ export const actions = {
         removeProduct: 'REMOVE_PRODUCT',
         incrementQuantity: 'INCREMENT_QUANTITY',
         decrementQuantity: 'DECREMENT_QUANTITY',
+    },
+    isLogged: {
+        login: 'LOGIN',
+        logout: 'LOGOUT',
     }
 }

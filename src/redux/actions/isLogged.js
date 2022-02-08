@@ -1,11 +1,13 @@
+import { actions } from "."
+
 export const login = () => {
     return {
-        type: 'LOGIN'
+        type: actions.isLogged.login
     }
 }
 
 export const logout = () => {
     return {
-        type: 'LOGOUT'
+        type: actions.isLogged.logout
     }
 }
