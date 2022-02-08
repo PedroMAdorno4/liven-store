@@ -1,7 +1,7 @@
-export const addProduct = (id) => {
+export const addProduct = (product) => {
     return {
         type: 'ADD_PRODUCT',
-        payload: id
+        payload: product
     }
 }
 

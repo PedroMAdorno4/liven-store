@@ -4,10 +4,9 @@ import * as yup from 'yup'
 import { userCredentials } from '../auth/mockUser';
 import { useSelector, useDispatch } from 'react-redux';
 import { login } from '../redux/actions/isLogged';
-import { useNavigate } from 'react-router-dom';
+import { useLocation, useNavigate } from 'react-router-dom';
 import { useEffect } from 'react';
 import { useState } from 'react';
-import CustomInput from '../components/CustomInput';
 
 const LoginSchema = yup.object().shape({
     email: yup.string()
@@ -22,6 +21,7 @@ function Login() {
     const dispatch = useDispatch()
     const isLogged = useSelector(state => state.isLogged)
     const navigate = useNavigate()
+    const location = useLocation();
     const [failedLoggingIn, setFailedLoggingIn] = useState(false);
 
     function submitLogin(values) {
@@ -33,8 +33,9 @@ function Login() {
     }
 
     useEffect(() => {
+        let from = location.state?.from?.pathname || "/products";
         if (isLogged) {
-            navigate('/products');
+            navigate(from, { replace: true });
         }
 
     }, [isLogged]);
@@ -51,13 +52,13 @@ function Login() {
                     {failedLoggingIn && <span className='input-error -translate-y-full'>Email ou senha inválidos.</span>}
                     <div>
                         <p>E-mail</p>
-                        <Field as={CustomInput} name="email" className='input' autoComplete="email" placeholder="" />
+                        <Field name="email" className='input' autoComplete="email" placeholder="" />
                         <ErrorMessage name="email">{msg => <span className='input-error'>{msg}</span>}</ErrorMessage>
                     </div>
 
                     <div className='mt-8'>
                         <p>Senha</p>
-                        <Field as={CustomInput} type="password" name="password" className='input' autoComplete='current-password' placeholder="" />
+                        <Field type="password" className='input' name="password" autoComplete='current-password' placeholder="" />
                         <ErrorMessage name="password">{msg => <span className='input-error'>{msg}</span>}</ErrorMessage>
                     </div>
 

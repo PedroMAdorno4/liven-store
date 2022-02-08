@@ -1,7 +1,6 @@
 import React from 'react';
 import { Formik, Form, Field, ErrorMessage } from 'formik';
 import * as yup from 'yup';
-import CustomInput from '../components/CustomInput';
 
 const RegisterSchema = yup.object().shape({
     name: yup.string()
@@ -31,32 +30,32 @@ function Register() {
                 <Form className='flex flex-col'>
                     <div>
                         <p>Nome</p>
-                        <Field as={CustomInput} type="text" name="name" autoComplete="name" placeholder="Nome completo" />
+                        <Field type="text" name="name" className='input' autoComplete="name" placeholder="Nome completo" />
                         <Error name="name" />
                     </div>
                     <div className='mt-8'>
                         <p>E-mail</p>
-                        <Field as={CustomInput} type="text" name="email" autoComplete="email" placeholder="nome@dominio.com" />
+                        <Field type="text" name="email" className='input' autoComplete="email" placeholder="nome@dominio.com" />
                         <Error name="email" />
                     </div>
                     <div className='mt-8'>
                         <p>Data de nascimento</p>
-                        <Field as={CustomInput} type="text" name="birthday" placeholder="dd/mm/aaaa" />
+                        <Field type="text" name="birthday" className='input' placeholder="dd/mm/aaaa" />
                         <Error name="birthday" />
                     </div>
                     <div className='mt-8'>
                         <p>CPF</p>
-                        <Field as={CustomInput} type="text" name="cpf" placeholder="XXX-XXX-XXX.XX" />
+                        <Field type="text" name="cpf" className='input' placeholder="XXX-XXX-XXX.XX" />
                         <Error name="cpf" />
                     </div>
                     <div className='mt-8 -space-y-px'>
                         <div>
                             <p>Senha</p>
-                            <Field as={CustomInput} type="password" name="password" className='input rounded-b-none' autoComplete="new-password" placeholder="Senha" />
+                            <Field type="password" name="password" className='input rounded-b-none' autoComplete="new-password" placeholder="Senha" />
                             <Error name="password" />
                         </div>
                         <div>
-                            <Field as={CustomInput} type="password" name="passwordConfirmation" className='input rounded-t-none' autoComplete="new-password" placeholder="Confirmar senha" />
+                            <Field type="password" name="passwordConfirmation" className='input rounded-t-none' autoComplete="new-password" placeholder="Confirmar senha" />
                             <Error name="passwordConfirmation" />
                         </div>
                     </div>

@@ -11,7 +11,7 @@ const cartReducer = (state = initialState, action) => {
     }
     switch (action.type) {
         case actions.cart.addProduct:
-            return { ...state, products: [...state.products, { id: action.payload, quantity: 1 }] }
+            return { ...state, products: [...state.products, { ...action.payload, quantity: 1 }] }
 
         case actions.cart.removeProduct:
             return removeProductFromState(action.payload)

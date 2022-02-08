@@ -3,7 +3,7 @@ import React from 'react';
 import { NavLink } from 'react-router-dom';
 
 function Navbar() {
-    return <div className='h-12 fixed w-full bg-indigo-700 text-white'>
+    return <div className='h-12 fixed top-0 w-full bg-indigo-700 text-white'>
         <nav className='w-full h-full flex items-center'>
             {/* Left aligned items */}
             <div className='mr-auto'>
@@ -12,7 +12,7 @@ function Navbar() {
                     Home
                 </NavLink>
 
-                <NavLink to='/login'
+                {/* <NavLink to='/login'
                     className={({ isActive }) => `nav-link ${isActive ? 'active-nav-link' : 'inactive-nav-link'}`}>
                     Login
                 </NavLink>
@@ -20,11 +20,11 @@ function Navbar() {
                 <NavLink to='/register'
                     className={({ isActive }) => `nav-link ${isActive ? 'active-nav-link' : 'inactive-nav-link'}`}>
                     Register
-                </NavLink>
+                </NavLink> */}
 
                 <NavLink to='/products'
                     className={({ isActive }) => `nav-link ${isActive ? 'active-nav-link' : 'inactive-nav-link'}`}>
-                    Products
+                    Produtos
                 </NavLink>
             </div>
 
