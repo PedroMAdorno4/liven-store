@@ -18,7 +18,7 @@ function App() {
           containerStyle={{
             position: 'absolute',
             marginTop: 50,
-            zIndex: 0
+            zIndex: 0,
           }}
           toastOptions={{ duration: 5000 }} />
         <Routes>

@@ -38,7 +38,7 @@ function Login() {
             navigate(from, { replace: true });
         }
 
-    }, [isLogged]);
+    }, [isLogged, navigate]);
 
 
     return (

@@ -1,36 +1,43 @@
 import { Field, Form, Formik } from 'formik';
+import { useState } from 'react';
 import { useSelector } from 'react-redux';
 import * as Constants from '../../helpers/constants'
-import { GetTotalPrice } from '../../helpers/pricing';
+import { getTotalPrice } from '../../helpers/pricing';
 
-function Checkout() {
+function Checkout({ setIsPaying, setPaymentMethod }) {
     const products = useSelector(state => state.cart.products)
 
+
     return (
-        <div className='w-full'>
-            <hr className='mt-8 mb-4' />
-            <div className='flex'>
-                <div>
-                    <ChoosePayment />
-                </div>
-                <div className='ml-auto text-center mr-12 whitespace-nowrap'>
-                    <p>Total:</p>
-                    <p className='price'>R$ {GetTotalPrice(products)}</p>
+        <>
+            <div className='w-full'>
+                <hr className='mt-8 mb-4' />
+                <div className='flex'>
+                    <div>
+                        <ChoosePayment setIsPaying={setIsPaying} setPaymentMethod={setPaymentMethod} />
+                    </div>
+                    <div className='ml-auto text-center mr-12 whitespace-nowrap'>
+                        <p>Total:</p>
+                        <p className='price'>R$ {getTotalPrice(products)}</p>
+                    </div>
                 </div>
             </div>
-        </div>
+        </>
     );
 }
 
 export default Checkout;
 
-function ChoosePayment() {
-
+function ChoosePayment({ setIsPaying, setPaymentMethod }) {
+    function submit(value) {
+        setPaymentMethod(value);
+        setIsPaying(true);
+    }
 
     return (
         <Formik
             initialValues={{ chosenPayment: '' }}
-            onSubmit={values => console.log(values)}
+            onSubmit={value => submit(value)}
         >
             {({ values }) => (
                 <Form>

@@ -30,6 +30,6 @@ export const decrementQuantity = (id) => {
 
 export const clear = () => {
     return {
-        type: 'CLEAR'
+        type: actions.cart.clear
     }
 }

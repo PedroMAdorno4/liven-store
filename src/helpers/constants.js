@@ -1,14 +1,20 @@
+export const payments = {
+    boleto: 'boleto',
+    pix: 'pix',
+    cartao: 'cartao'
+}
+
 export const paymentMethods = [
     {
         name: 'Boleto',
-        value: 'boleto'
+        value: payments.boleto
     },
     {
         name: 'Pix',
-        value: 'pix'
+        value: payments.pix
     },
     {
-        name: 'Cartao de credito',
-        value: 'cartao'
+        name: 'Cartão de crédito',
+        value: payments.cartao
     },
 ]
