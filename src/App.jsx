@@ -6,7 +6,7 @@ import Register from './pages/Register/Register';
 import Products from './pages/Products/Products';
 import Navbar from './components/Navbar';
 import Cart from './pages/Cart/Cart';
-import RequireAuth from './helpers/RequireAuth';
+import RequireAuth from './components/RequireAuth';
 import { Toaster } from 'react-hot-toast';
 
 function App() {

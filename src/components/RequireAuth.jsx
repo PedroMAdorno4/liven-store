@@ -16,6 +16,6 @@ function RequireAuth({ children, isPublic = false, isPrivate = false }) {
     }
 
 
-    return path === '' ? children : <Navigate to={path} state={{ from: location }} replace />;;
+    return path === '' ? children : <Navigate to={path} state={{ from: location }} replace />;
 }
 export default RequireAuth;

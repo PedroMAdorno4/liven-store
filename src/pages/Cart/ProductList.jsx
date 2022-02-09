@@ -19,7 +19,7 @@ function ProductListItem({ product }) {
             </div>
             <p className='product-title'>{product.title}</p>
             <ProductQuantityBar id={product.id} quantity={product.quantity} removeButton={true} className='ml-auto mr-8' />
-            <p className='price sm:w-28 text-2xl my-4 sm:my-0'>R$ {product.price.toFixed(2)}</p>
+            <p className='price sm:w-28 text-2xl sm:text-base my-4 sm:my-0'>R$ {product.price.toFixed(2)}</p>
         </li>
     )
 }

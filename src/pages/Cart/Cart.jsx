@@ -14,19 +14,19 @@ function Cart() {
     return (
         <>
             {
-                productsInCart.length === 0 && paymentMethod === '' && !isPaying &&
+                productsInCart.length === 0 && !isPaying &&
                 <div className='centered-page h-full space-y-8'>
                     <EmptyCart />
                 </div>
-            }
-            {paymentMethod !== '' && isPaying &&
-                <FinishedOrder paymentMethod={paymentMethod} />
             }
             {productsInCart.length > 0 && !isPaying &&
                 <div className='responsive-container h-full'>
                     <ProductList productList={productsInCart} />
                     <Checkout setIsPaying={setIsPaying} setPaymentMethod={setPaymentMethod} />
                 </div>
+            }
+            {isPaying &&
+                <FinishedOrder paymentMethod={paymentMethod} />
             }
         </>
     );
