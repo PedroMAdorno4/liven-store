@@ -33,9 +33,8 @@ function Login() {
     }
 
     useEffect(() => {
-        let from = location.state?.from?.pathname || "/products";
         if (isLogged) {
-            navigate(from, { replace: true });
+            navigate('/products', { replace: true });
         }
 
         // eslint-disable-next-line react-hooks/exhaustive-deps
