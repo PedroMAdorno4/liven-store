@@ -1,4 +1,4 @@
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { HashRouter as Router, Routes, Route } from 'react-router-dom';
 import Home from './pages/Home/Home';
 import Login from './pages/Login/Login';
 import NotFound from './pages/NotFound/NotFound';
@@ -12,7 +12,7 @@ import { Toaster } from 'react-hot-toast';
 function App() {
   return (
     <>
-      <Router basename='/liven-store'>
+      <Router basename='/'>
         <Navbar />
         <Toaster position="top-right"
           containerStyle={{
