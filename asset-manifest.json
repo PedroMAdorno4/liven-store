@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.css": "/liven-store/static/css/main.95886eb4.css",
-    "main.js": "/liven-store/static/js/main.ef66bd4f.js",
+    "main.css": "/liven-store/static/css/main.a91553eb.css",
+    "main.js": "/liven-store/static/js/main.1b3d1a7e.js",
     "static/media/PixQrCode.png": "/liven-store/static/media/PixQrCode.21c79a84ac34faf6982f.png",
     "index.html": "/liven-store/index.html",
-    "main.95886eb4.css.map": "/liven-store/static/css/main.95886eb4.css.map",
-    "main.ef66bd4f.js.map": "/liven-store/static/js/main.ef66bd4f.js.map"
+    "main.a91553eb.css.map": "/liven-store/static/css/main.a91553eb.css.map",
+    "main.1b3d1a7e.js.map": "/liven-store/static/js/main.1b3d1a7e.js.map"
   },
   "entrypoints": [
-    "static/css/main.95886eb4.css",
-    "static/js/main.ef66bd4f.js"
+    "static/css/main.a91553eb.css",
+    "static/js/main.1b3d1a7e.js"
   ]
 }
