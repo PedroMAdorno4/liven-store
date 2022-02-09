@@ -15,7 +15,8 @@ function FinishedOrder({ paymentMethod }) {
 
     useEffect(() => {
         dispatch(clear())
-    }, [])
+        //Safe to add to dependency array. https://react-redux.js.org/api/hooks#usedispatch
+    }, [dispatch])
 
     return (
         <div className='centered-page'>
@@ -23,7 +24,6 @@ function FinishedOrder({ paymentMethod }) {
                 <p className='text-center text-2xl mb-16'>Pedido <span>#{parseInt(Math.random() * 10000)} finalizado!</span></p>
                 {paymentMethod.chosenPayment === payments.boleto && <Boleto />}
                 {paymentMethod.chosenPayment === payments.pix && <Pix />}
-                {paymentMethod.chosenPayment === payments.cartao && <Boleto />}
                 <p className='mt-8 text-lg font-bold'>Valor total: R$ {totalPrice}</p>
             </div>
         </div>

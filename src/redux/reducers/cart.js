@@ -1,8 +1,7 @@
 import { actions } from "../actions";
 
 const initialState = {
-    products: [],
-    coupon: ''
+    products: []
 }
 
 const cartReducer = (state = initialState, action) => {

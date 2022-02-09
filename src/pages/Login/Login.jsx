@@ -1,9 +1,9 @@
 import React from 'react';
 import { Formik, Form, Field, ErrorMessage } from 'formik';
 import * as yup from 'yup'
-import { userCredentials } from '../auth/mockUser';
+import { userCredentials } from '../../auth/mockUser';
 import { useSelector, useDispatch } from 'react-redux';
-import { login } from '../redux/actions/isLogged';
+import { login } from '../../redux/actions/isLogged';
 import { useLocation, useNavigate } from 'react-router-dom';
 import { useEffect } from 'react';
 import { useState } from 'react';
@@ -38,6 +38,7 @@ function Login() {
             navigate(from, { replace: true });
         }
 
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [isLogged, navigate]);
 
 
@@ -49,7 +50,7 @@ function Login() {
                 onSubmit={values => { submitLogin(values) }}
             >
                 <Form className='flex flex-col'>
-                    {failedLoggingIn && <span className='input-error -translate-y-full'>Email ou senha inválidos.</span>}
+                    {failedLoggingIn && <span className='input-error -translate-y-full'>Email ou senha incorretos.</span>}
                     <div>
                         <p>E-mail</p>
                         <Field name="email" className='input' autoComplete="email" placeholder="" />

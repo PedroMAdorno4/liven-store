@@ -1,9 +1,9 @@
 import React from 'react';
 import { Formik, Form, Field, ErrorMessage } from 'formik';
 import * as yup from 'yup';
-import FieldMask from '../components/FieldMask';
-import { TestaCPF } from '../helpers/cpf';
-import { getFormatedDate, getTodayString } from '../helpers/dates'
+import FieldMask from '../../components/FieldMask'
+import { TestaCPF } from '../../helpers/cpf';
+import { getFormatedDate, getTodayString } from '../../helpers/dates'
 import { toast } from 'react-hot-toast';
 import { useNavigate } from 'react-router-dom';
 

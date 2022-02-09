@@ -1,4 +1,5 @@
 {
+	"homepage": "http://pedromadorno4.github.io/liven-store",
 	"name": "liven-store",
 	"version": "0.1.0",
 	"private": true,
@@ -26,6 +27,8 @@
 	},
 	"scripts": {
 		"start": "TAILWIND_MODE=watch react-scripts start",
+		"predeploy": "npm run build",
+		"deploy": "gh-pages -d build",
 		"build": "react-scripts build",
 		"test": "react-scripts test",
 		"eject": "react-scripts eject"
@@ -44,5 +47,8 @@
 			"last 1 firefox version",
 			"last 1 safari version"
 		]
+	},
+	"devDependencies": {
+		"gh-pages": "^3.2.3"
 	}
 }

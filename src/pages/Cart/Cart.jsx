@@ -14,7 +14,7 @@ function Cart() {
     return (
         <>
             {
-                productsInCart.length === 0 && paymentMethod !== '' && !isPaying &&
+                productsInCart.length === 0 && paymentMethod === '' && !isPaying &&
                 <div className='centered-page h-full space-y-8'>
                     <EmptyCart />
                 </div>
@@ -39,7 +39,7 @@ function EmptyCart() {
         <>
             <div className='flex flex-col space-y-8 text-center'>
 
-                <p>Nenhum produto adicionado ;(</p>
+                <p>Seu carrinho está vazio</p>
                 <Link to={'/products'} className='button-primary'>Continuar comprando</Link>
             </div>
         </>

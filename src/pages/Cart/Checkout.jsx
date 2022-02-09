@@ -1,5 +1,4 @@
 import { Field, Form, Formik } from 'formik';
-import { useState } from 'react';
 import { useSelector } from 'react-redux';
 import * as Constants from '../../helpers/constants'
 import { getTotalPrice } from '../../helpers/pricing';
@@ -41,7 +40,7 @@ function ChoosePayment({ setIsPaying, setPaymentMethod }) {
         >
             {({ values }) => (
                 <Form>
-                    <p>Escolha um metodo de pagamento:</p>
+                    <p>Escolha um método de pagamento:</p>
                     <div className='flex flex-col space-y-4 mt-4'>
                         {Constants.paymentMethods.map(method => <PaymentMethod data={method} key={method.name} />)}
                     </div>

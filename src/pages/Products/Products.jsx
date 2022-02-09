@@ -10,6 +10,7 @@ function Products() {
     useEffect(() => {
         let isCancelled = false;
 
+        //API returns at max 30 products
         fetch('https://fakestoreapi.com/products')
             .then(res => res.json())
             .then(data => !isCancelled ? (setProducts(data), setHasLoaded(true)) : null)
