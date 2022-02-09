@@ -36,7 +36,7 @@
 	}
 
 	.button-danger {
-		@apply w-24 border border-red-700 rounded-md
+		@apply w-28 sm:w-24 border border-red-700 rounded-md
         text-red-700 hover:bg-red-700
 		hover:text-white hover:font-bold;
 	}
