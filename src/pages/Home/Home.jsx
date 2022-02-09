@@ -15,7 +15,7 @@ function NavCard({ path = '/', text = 'Link' }) {
   return (
 
     <Link to={path} className='w-96'>
-      <div className='px-12 py-6 bg-indigo-500 text-lg font-medium rounded-md text-white text-center hover:bg-indigo-600'>
+      <div className='nav-card'>
         {text}
       </div>
 
