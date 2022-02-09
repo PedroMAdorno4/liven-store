@@ -12,7 +12,7 @@ import { Toaster } from 'react-hot-toast';
 function App() {
   return (
     <>
-      <Router>
+      <Router basename='/liven-store'>
         <Navbar />
         <Toaster position="top-right"
           containerStyle={{
